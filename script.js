@@ -17,8 +17,9 @@ function registerOneTimeSync() {
         navigator.serviceWorker.ready.then(function(reg) {
             if (reg.sync) {
 
-                reg.sync.register({
+                   reg.sync.register({
                         tag: 'oneTimeSync'
+                        console.log('Tag got set....!');
                     })
                     .then(function(event) {
                         console.log('Sync registration successfull..!', event);
